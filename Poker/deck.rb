@@ -22,7 +22,6 @@ class Deck
     def draw 
         @deck.pop
     end
-
 end
 
 p d = Deck.new

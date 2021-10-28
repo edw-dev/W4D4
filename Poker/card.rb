@@ -6,4 +6,5 @@ class Card
     def inspect
         [@suit, @num]
     end
+    
 end
