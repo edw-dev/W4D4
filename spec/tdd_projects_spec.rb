@@ -23,14 +23,21 @@ describe "Array#two_sum" do
 end
 
 describe "Array#transpose" do
-    let(:array) {[
-        [0, 1, 2],
-        [3, 4, 5],
-        [6, 7, 8]
-      ]}
+    let(:array) {[ [0, 1, 2],
+                   [3, 4, 5],
+                   [6, 7, 8] ]}
+    
     it "transposes array" do
         expect(array.my_transpose).to eq([[0, 3, 6],
-            [1, 4, 7],
-            [2, 5, 8]])
+                                          [1, 4, 7],
+                                          [2, 5, 8]])
+    end
+end
+
+describe "Array#stock_picker" do
+    let(:array) { [10,100,1000] }
+
+    it "buys low, sells high" do
+        expect(array.stock_picker).to eq([0, 2])
     end
 end
