@@ -12,7 +12,20 @@ class Array
 
     def two_sum
         arr=[]
-        self.each do |ele|
+        self.each_with_index do |ele, i|
+            (i...self.count).each do |j|
+                arr << [i, j] if ele+self[j] == 0 && i < j
+            end
+        end
+        arr
+    end
+
+    def my_transpose
+        arr = Array.new(self.count){Array.new(self.count)}
+        self.each_index do |i|
+            self.each_index do |j|
+                arr[j][i] = self[i][j]
+            end
         end
         arr
     end
